@@ -1,61 +1,8 @@
-Cosmic Navigation System
-Overview
-Cosmic Navigation System is a C# console application designed to simulate space rescue missions. It calculates the most efficient route for stranded astronauts to reach a designated target coordinate while navigating through treacherous cosmic hazards. The system utilizes Dijkstra's Algorithm to determine the shortest path based on varying terrain costs and generates an automated mission report that can be securely transmitted via email.
-
-Key Features
-Advanced Pathfinding: Utilizes a custom IPathfinderImplementation to calculate the shortest route. It intelligently navigates around impassable obstacles and calculates movement costs based on the environment.
-
-Dynamic Map Generation: * Manual Mode: Input custom map dimensions and grid layouts directly into the console.
-
-Random Mode: Procedurally generates a map with random distributions of open space, space debris, asteroids, a target destination, and up to 3 stranded astronauts.
-
-Visual Mission Reports: Generates an ASCII-based visual map of the executed mission, plotting the exact steps (*) taken by the astronauts to reach the target (F).
-
-Live Gmail Transmission: Integrates MailKit and MimeKit to securely email the final mission report directly from the console using an SMTP connection.
-
-Secure Input: Features a custom password masking system that hides your 16-character App Password during input to ensure security during live demonstrations.
-
-Map Legend
-The cosmic grid is built using specific characters to represent the environment:
-
-0 : Open Space (Normal movement, Cost: 1 step)
-
-D : Space Debris (Difficult terrain, Cost: 2 steps)
-
-X : Asteroid (Impassable obstacle)
-
-S# : Astronaut (Starting position, e.g., S1, S2)
-
-F : Target / Finish (The extraction point)
-
-* : Travel Path (Visualized in the final report)
-
- Prerequisites and Setup
-To run this project locally, you will need:
-
-.NET SDK installed on your machine.
-
-MailKit & MimeKit NuGet Packages installed in your project:
-
-Bash
-
-dotnet add package MailKit
-
+🚀 Cosmic Navigation System
+An automated, console-based C# application designed to simulate and execute space rescue missions. The system calculates the most efficient routes for stranded astronauts to reach extraction points while navigating treacherous cosmic hazards, and securely transmits mission reports via email.📖 Table of ContentsAbout the ProjectFeaturesMap LegendGetting StartedUsageTech Stack🌌 About the ProjectCosmic Navigation System utilizes Dijkstra's Algorithm to determine the shortest path through a cosmic grid based on varying terrain costs. It handles dynamic map generation, calculates safe routes around impassable obstacles, visualizes the journey in the console, and integrates secure SMTP protocols to email the final mission debrief to Mission Control.✨ FeaturesAdvanced Pathfinding: Intelligently navigates around impassable obstacles and calculates movement costs based on the environment using Dijkstra's Algorithm.Dynamic Map Generation: * Manual Mode: Input custom map dimensions and layout directly.Random Mode: Procedurally generates a cosmic grid with randomized distributions of open space, debris, asteroids, targets, and up to 3 astronauts.Visual Mission Reports: Generates an ASCII-based visual map of the executed mission, plotting the exact route taken by the astronauts.Live Gmail Transmission: Automatically compiles a mission report and sends it securely to a designated email address directly from the console.Secure Input: Features a custom password-masking interface that hides your 16-character App Password during input to ensure security during live demonstrations.🗺️ Map LegendThe cosmic grid uses specific characters to represent the environment. Here is how to read the map:SymbolEnvironmentDescriptionMovement Cost0Open SpaceClear vacuum; safe for normal movement.1 StepDSpace DebrisDifficult terrain; slows down movement.2 StepsXAsteroidImpassable obstacle; route must go around.BlockedS#AstronautStarting position of a stranded astronaut (e.g., S1, S2).-FFinish/TargetThe extraction point / mission destination.-*Travel PathThe visual trail left by the astronaut in the final report.-⚙️ Getting StartedTo run this project locally, you will need to set up your development environment.Prerequisites.NET SDK (Version 6.0 or higher recommended).Gmail App Password: To use the email transmission feature, you must have 2-Step Verification enabled on your Google account and generate a 16-character App Password. Standard Google account passwords will not work for SMTP authentication.InstallationClone the repository or download the source code.Open your terminal in the project directory.Install the required NuGet packages for email handling:Bashdotnet add package MailKit
 dotnet add package MimeKit
-
-Gmail App Password: To use the email transmission feature, you must have 2-Step Verification enabled on your Google account and generate a 16-character App Password. Standard Google account passwords will not work for SMTP authentication.
-
-Usage
-Build and run the console application.
-
-Select your map generation preference:
-
-Press 1 to manually type the map dimensions and grid.
-
-Press 2 to specify dimensions and let the system randomly populate the map.
-
-The system will process the pathfinding algorithms and print the success/failure statuses of the astronauts in the console.
-
-When prompted, type Y to send the report via email, or N to exit.
-
-If sending an email, input your sender address, the 16-character App Password (which will be hidden as *), and the receiver address.
+Build the project:Bashdotnet build
+🚀 Usage
+Run the application from your IDE or via the terminal:
+Bashdotnet run
+Select Map Generation Mode:Press 1 to manually type the map dimensions and grid characters.Press 2 to specify dimensions and let the system randomly populate the map.Review Results: The system will process the pathfinding algorithms and print the shortest paths, or alert you if an astronaut is trapped.Transmit Report: * When prompted, type Y to send the report via email, or N to exit.Input your sender Gmail address.Enter your 16-character App Password (it will remain hidden).Enter the receiver's email address.💻 Tech StackLanguage: C#Algorithms: Dijkstra's Algorithm, Priority QueuesLibraries: MailKit, MimeKit (for SMTP Email Transmission)
