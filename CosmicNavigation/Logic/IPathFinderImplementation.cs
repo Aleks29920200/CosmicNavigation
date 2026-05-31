@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CosmicNavigation
+namespace CosmicNavigation.PathFinding
 {
     internal class IPathFinderImplementation:IPathfinder
     {
@@ -37,7 +37,7 @@ namespace CosmicNavigation
                     string cell = map.Grid[next.Row, next.Col];
                     if (cell == "X") continue;
 
-                    int stepCost = (cell == "D") ? 2 : 1;
+                    int stepCost = cell == "D" ? 2 : 1;
                     int newCost = costSoFar[current] + stepCost;
 
                     if (!costSoFar.ContainsKey(next) || newCost < costSoFar[next])

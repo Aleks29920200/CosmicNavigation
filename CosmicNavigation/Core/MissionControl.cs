@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using CosmicNavigation.CosmicNavigation;
+using CosmicNavigation.PathFinding;
 using MimeKit;
 
-namespace CosmicNavigation
+namespace CosmicNavigation.Core
 {
     public class MissionControl
     {
