@@ -1,4 +1,6 @@
 ﻿using System;
+using CosmicNavigation.Core;
+using CosmicNavigation.PathFinding;
 
 namespace CosmicNavigation
 {
