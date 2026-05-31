@@ -38,8 +38,10 @@ To run this project locally, you will need:
 MailKit & MimeKit NuGet Packages installed in your project:
 
 Bash
+
 dotnet add package MailKit
 dotnet add package MimeKit
+
 Gmail App Password: To use the email transmission feature, you must have 2-Step Verification enabled on your Google account and generate a 16-character App Password. Standard Google account passwords will not work for SMTP authentication.
 
 Usage
