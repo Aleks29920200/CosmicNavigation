@@ -1,10 +1,10 @@
-# 🚀 Cosmic Navigation System
+#  Cosmic Navigation System
 
 An automated, console-based C# application designed to simulate and execute space rescue missions. The system calculates the most efficient routes for stranded astronauts to reach extraction points while navigating treacherous cosmic hazards, and securely transmits mission reports via email.
 
 ---
 
-## 📖 Table of Contents
+##  Table of Contents
 * [About the Project](#about-the-project)
 * [Features](#features)
 * [Map Legend](#map-legend)
@@ -14,12 +14,12 @@ An automated, console-based C# application designed to simulate and execute spac
 
 ---
 
-## 🌌 About the Project
+##  About the Project
 **Cosmic Navigation System** utilizes **Dijkstra's Algorithm** to determine the shortest path through a cosmic grid based on varying terrain costs. It handles dynamic map generation, calculates safe routes around impassable obstacles, visualizes the journey in the console, and integrates secure SMTP protocols to email the final mission debrief to Mission Control.
 
 ---
 
-## ✨ Features
+##  Features
 * **Advanced Pathfinding:** Intelligently navigates around impassable obstacles and calculates movement costs based on the environment using Dijkstra's Algorithm.
 * **Dynamic Map Generation:** * **Manual Mode:** Input custom map dimensions and layout directly.
   * **Random Mode:** Procedurally generates a cosmic grid with randomized distributions of open space, debris, asteroids, targets, and up to 3 astronauts.
@@ -29,7 +29,7 @@ An automated, console-based C# application designed to simulate and execute spac
 
 ---
 
-## 🗺️ Map Legend
+##  Map Legend
 
 The cosmic grid uses specific characters to represent the environment. Here is how to read the map:
 
